@@ -12,6 +12,13 @@ namespace App02_LoginSocial
         public MainPage()
         {
             InitializeComponent();
+
+            LoginFacebook.Clicked += Facebook;
+        }
+
+        public static void Facebook(object sender, EventArgs args)
+        {
+            App.Current.MainPage = new LoginFacebook();
         }
     }
 }
